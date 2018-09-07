@@ -1,6 +1,6 @@
 const DBConnectivity = require("../Utils/UtilMethod")
 
-exports.login = async(req,res) => {
+exports.  login = async(req,res) => {
     var client = DBConnectivity.getDBConnection();
     try{
         var result= await client.query('SELECT * FROM USERDETAILS');
@@ -12,5 +12,15 @@ exports.login = async(req,res) => {
     }
     finally{
         client.end();
+    }
+}
+
+exports.signup = async (req,res) => {
+    //var client=DBConnectivity.getDBConnection();
+    try{
+        res.send("sign up page")
+    }
+    catch{
+
     }
 }
